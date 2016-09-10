@@ -1,0 +1,195 @@
+Connecting to 10.22.1.5:2182
+Connected in 7 ms, handle is 0
+Testing latencies on server 10.22.1.5:2182 using syncronous calls
+created     100 permanent znodes  in     77 ms (0.775800 ms/op 1288.992421/sec)
+set         100           znodes  in     69 ms (0.696080 ms/op 1436.617036/sec)
+get         100           znodes  in     22 ms (0.226679 ms/op 4411.527620/sec)
+deleted     100 permanent znodes  in     64 ms (0.641239 ms/op 1559.481698/sec)
+created     100 ephemeral znodes  in     68 ms (0.683868 ms/op 1462.270643/sec)
+watched     100           znodes  in     20 ms (0.200281 ms/op 4992.981287/sec)
+deleted     100 ephemeral znodes  in     62 ms (0.624170 ms/op 1602.126847/sec)
+notif       100           watches in   1001 ms (10.010531 ms/op 99.894801/sec)
+Latency test complete
+
+Connecting to 10.22.1.5:2182
+Connected in 3 ms, handle is 0
+Testing latencies on server 10.22.1.5:2182 using syncronous calls
+created     100 permanent znodes  in     66 ms (0.667272 ms/op 1498.640102/sec)
+set         100           znodes  in     56 ms (0.569701 ms/op 1755.306131/sec)
+get         100           znodes  in     18 ms (0.189462 ms/op 5278.111394/sec)
+deleted     100 permanent znodes  in     58 ms (0.585899 ms/op 1706.777785/sec)
+created     100 ephemeral znodes  in     62 ms (0.629439 ms/op 1588.715408/sec)
+watched     100           znodes  in     18 ms (0.188990 ms/op 5291.295352/sec)
+deleted     100 ephemeral znodes  in     61 ms (0.618629 ms/op 1616.476537/sec)
+notif       100           watches in   1001 ms (10.010462 ms/op 99.895491/sec)
+Latency test complete
+
+Connecting to 10.22.1.5:2182
+Connected in 3 ms, handle is 0
+Testing latencies on server 10.22.1.5:2182 using syncronous calls
+created     100 permanent znodes  in     63 ms (0.631130 ms/op 1584.460269/sec)
+set         100           znodes  in     51 ms (0.518930 ms/op 1927.042338/sec)
+get         100           znodes  in     17 ms (0.173168 ms/op 5774.732900/sec)
+deleted     100 permanent znodes  in     50 ms (0.501158 ms/op 1995.377757/sec)
+created     100 ephemeral znodes  in     52 ms (0.525250 ms/op 1903.853731/sec)
+watched     100           znodes  in     17 ms (0.170140 ms/op 5877.503433/sec)
+deleted     100 ephemeral znodes  in     51 ms (0.516961 ms/op 1934.383316/sec)
+notif       100           watches in   1001 ms (10.010531 ms/op 99.894801/sec)
+Latency test complete
+
+Connecting to 10.22.1.5:2182
+Connected in 3 ms, handle is 0
+Testing latencies on server 10.22.1.5:2182 using syncronous calls
+created     100 permanent znodes  in     57 ms (0.571270 ms/op 1750.485793/sec)
+set         100           znodes  in     47 ms (0.472422 ms/op 2116.753134/sec)
+get         100           znodes  in     16 ms (0.162420 ms/op 6156.866890/sec)
+deleted     100 permanent znodes  in     47 ms (0.470870 ms/op 2123.730487/sec)
+created     100 ephemeral znodes  in     49 ms (0.490601 ms/op 2038.316008/sec)
+watched     100           znodes  in     17 ms (0.173509 ms/op 5763.385778/sec)
+deleted     100 ephemeral znodes  in     52 ms (0.526800 ms/op 1898.253046/sec)
+notif       100           watches in   1001 ms (10.010772 ms/op 99.892398/sec)
+Latency test complete
+
+Connecting to 10.22.1.5:2182
+Connected in 3 ms, handle is 0
+Testing latencies on server 10.22.1.5:2182 using syncronous calls
+created     100 permanent znodes  in     51 ms (0.519218 ms/op 1925.971641/sec)
+set         100           znodes  in     45 ms (0.457759 ms/op 2184.556089/sec)
+get         100           znodes  in     12 ms (0.125940 ms/op 7940.298734/sec)
+deleted     100 permanent znodes  in     48 ms (0.484290 ms/op 2064.877958/sec)
+created     100 ephemeral znodes  in     51 ms (0.510809 ms/op 1957.677282/sec)
+watched     100           znodes  in     13 ms (0.132060 ms/op 7572.312692/sec)
+deleted     100 ephemeral znodes  in     51 ms (0.512350 ms/op 1951.792271/sec)
+notif       100           watches in   1001 ms (10.010729 ms/op 99.892827/sec)
+Latency test complete
+
+Connecting to 10.22.1.5:2182
+Connected in 3 ms, handle is 0
+Testing latencies on server 10.22.1.5:2182 using syncronous calls
+created     100 permanent znodes  in     49 ms (0.493701 ms/op 2025.519503/sec)
+set         100           znodes  in     41 ms (0.419190 ms/op 2385.553489/sec)
+get         100           znodes  in     11 ms (0.114839 ms/op 8707.837316/sec)
+deleted     100 permanent znodes  in     47 ms (0.473690 ms/op 2111.085162/sec)
+created     100 ephemeral znodes  in     42 ms (0.420902 ms/op 2375.851228/sec)
+watched     100           znodes  in     11 ms (0.115800 ms/op 8635.585753/sec)
+deleted     100 ephemeral znodes  in     40 ms (0.404210 ms/op 2473.961000/sec)
+notif       100           watches in   1001 ms (10.010540 ms/op 99.894706/sec)
+Latency test complete
+
+Connecting to 10.22.1.5:2182
+Connected in 3 ms, handle is 0
+Testing latencies on server 10.22.1.5:2182 using syncronous calls
+created     100 permanent znodes  in     41 ms (0.413990 ms/op 2415.517162/sec)
+set         100           znodes  in     34 ms (0.346570 ms/op 2885.419848/sec)
+get         100           znodes  in     15 ms (0.151761 ms/op 6589.326505/sec)
+deleted     100 permanent znodes  in     39 ms (0.390651 ms/op 2559.828137/sec)
+created     100 ephemeral znodes  in     41 ms (0.413840 ms/op 2416.393877/sec)
+watched     100           znodes  in     11 ms (0.115879 ms/op 8629.722445/sec)
+deleted     100 ephemeral znodes  in     43 ms (0.432000 ms/op 2314.813956/sec)
+notif       100           watches in   1001 ms (10.010378 ms/op 99.896324/sec)
+Latency test complete
+
+Connecting to 10.22.1.5:2182
+Connected in 3 ms, handle is 0
+Testing latencies on server 10.22.1.5:2182 using syncronous calls
+created     100 permanent znodes  in     40 ms (0.408008 ms/op 2450.931742/sec)
+set         100           znodes  in     31 ms (0.315201 ms/op 3172.575924/sec)
+get         100           znodes  in      9 ms (0.092249 ms/op 10840.235708/sec)
+deleted     100 permanent znodes  in     31 ms (0.316839 ms/op 3156.174939/sec)
+created     100 ephemeral znodes  in     33 ms (0.334220 ms/op 2992.041774/sec)
+watched     100           znodes  in      8 ms (0.088289 ms/op 11326.467014/sec)
+deleted     100 ephemeral znodes  in     34 ms (0.345311 ms/op 2895.938799/sec)
+notif       100           watches in   1001 ms (10.010531 ms/op 99.894801/sec)
+Latency test complete
+
+Connecting to 10.22.1.5:2182
+Connected in 3 ms, handle is 0
+Testing latencies on server 10.22.1.5:2182 using syncronous calls
+created     100 permanent znodes  in     43 ms (0.435460 ms/op 2296.424211/sec)
+set         100           znodes  in     34 ms (0.343981 ms/op 2907.139095/sec)
+get         100           znodes  in      8 ms (0.080252 ms/op 12460.796197/sec)
+deleted     100 permanent znodes  in     35 ms (0.358169 ms/op 2791.977474/sec)
+created     100 ephemeral znodes  in     35 ms (0.355852 ms/op 2810.159794/sec)
+watched     100           znodes  in      8 ms (0.080068 ms/op 12489.366644/sec)
+deleted     100 ephemeral znodes  in     38 ms (0.385451 ms/op 2594.361353/sec)
+notif       100           watches in   1001 ms (10.010488 ms/op 99.895230/sec)
+Latency test complete
+
+Connecting to 10.22.1.5:2182
+Connected in 3 ms, handle is 0
+Testing latencies on server 10.22.1.5:2182 using syncronous calls
+created     100 permanent znodes  in     37 ms (0.378790 ms/op 2639.985901/sec)
+set         100           znodes  in     29 ms (0.293570 ms/op 3406.347659/sec)
+get         100           znodes  in      8 ms (0.082550 ms/op 12113.863216/sec)
+deleted     100 permanent znodes  in     29 ms (0.294662 ms/op 3393.724411/sec)
+created     100 ephemeral znodes  in     35 ms (0.357029 ms/op 2800.889488/sec)
+watched     100           znodes  in      8 ms (0.082269 ms/op 12155.288935/sec)
+deleted     100 ephemeral znodes  in     35 ms (0.358229 ms/op 2791.512925/sec)
+notif       100           watches in   1001 ms (10.010550 ms/op 99.894611/sec)
+Latency test complete
+
+Connecting to 10.22.1.5:2182
+Connected in 3 ms, handle is 0
+Testing latencies on server 10.22.1.5:2182 using syncronous calls
+created     100 permanent znodes  in     41 ms (0.414619 ms/op 2411.850216/sec)
+set         100           znodes  in     33 ms (0.336871 ms/op 2968.494062/sec)
+get         100           znodes  in      8 ms (0.081530 ms/op 12265.481343/sec)
+deleted     100 permanent znodes  in     27 ms (0.271060 ms/op 3689.213746/sec)
+created     100 ephemeral znodes  in     33 ms (0.337510 ms/op 2962.874218/sec)
+watched     100           znodes  in      7 ms (0.079598 ms/op 12563.062361/sec)
+deleted     100 ephemeral znodes  in     29 ms (0.292089 ms/op 3423.614206/sec)
+notif       100           watches in   1001 ms (10.010560 ms/op 99.894516/sec)
+Latency test complete
+
+Connecting to 10.22.1.5:2182
+Connected in 3 ms, handle is 0
+Testing latencies on server 10.22.1.5:2182 using syncronous calls
+created     100 permanent znodes  in     37 ms (0.375791 ms/op 2661.056478/sec)
+set         100           znodes  in     30 ms (0.308368 ms/op 3242.876472/sec)
+get         100           znodes  in      9 ms (0.094631 ms/op 10567.393112/sec)
+deleted     100 permanent znodes  in     30 ms (0.304680 ms/op 3282.133467/sec)
+created     100 ephemeral znodes  in     35 ms (0.353870 ms/op 2825.893387/sec)
+watched     100           znodes  in      7 ms (0.077469 ms/op 12908.331025/sec)
+deleted     100 ephemeral znodes  in     32 ms (0.321319 ms/op 3112.171016/sec)
+notif       100           watches in   1001 ms (10.010519 ms/op 99.894920/sec)
+Latency test complete
+
+Connecting to 10.22.1.5:2182
+Connected in 3 ms, handle is 0
+Testing latencies on server 10.22.1.5:2182 using syncronous calls
+created     100 permanent znodes  in     37 ms (0.379910 ms/op 2632.199114/sec)
+set         100           znodes  in     25 ms (0.257299 ms/op 3886.529712/sec)
+get         100           znodes  in      7 ms (0.077751 ms/op 12861.623379/sec)
+deleted     100 permanent znodes  in     25 ms (0.256522 ms/op 3898.305652/sec)
+created     100 ephemeral znodes  in     32 ms (0.320890 ms/op 3116.333187/sec)
+watched     100           znodes  in      7 ms (0.071399 ms/op 14005.756837/sec)
+deleted     100 ephemeral znodes  in     28 ms (0.287971 ms/op 3472.565903/sec)
+notif       100           watches in   1001 ms (10.010571 ms/op 99.894397/sec)
+Latency test complete
+
+Connecting to 10.22.1.5:2182
+Connected in 3 ms, handle is 0
+Testing latencies on server 10.22.1.5:2182 using syncronous calls
+created     100 permanent znodes  in     33 ms (0.335841 ms/op 2977.597933/sec)
+set         100           znodes  in     25 ms (0.251381 ms/op 3978.019101/sec)
+get         100           znodes  in      7 ms (0.076900 ms/op 13003.980902/sec)
+deleted     100 permanent znodes  in     27 ms (0.279310 ms/op 3580.254543/sec)
+created     100 ephemeral znodes  in     30 ms (0.302379 ms/op 3307.106531/sec)
+watched     100           znodes  in      7 ms (0.070629 ms/op 14158.466109/sec)
+deleted     100 ephemeral znodes  in     31 ms (0.310659 ms/op 3218.959325/sec)
+notif       100           watches in   1001 ms (10.010540 ms/op 99.894706/sec)
+Latency test complete
+
+Connecting to 10.22.1.5:2182
+Connected in 3 ms, handle is 0
+Testing latencies on server 10.22.1.5:2182 using syncronous calls
+created     100 permanent znodes  in     29 ms (0.295320 ms/op 3386.162466/sec)
+set         100           znodes  in     25 ms (0.251448 ms/op 3976.962973/sec)
+get         100           znodes  in      6 ms (0.066810 ms/op 14967.896653/sec)
+deleted     100 permanent znodes  in     23 ms (0.238309 ms/op 4196.234268/sec)
+created     100 ephemeral znodes  in     26 ms (0.261080 ms/op 3830.239715/sec)
+watched     100           znodes  in      6 ms (0.068250 ms/op 14652.078530/sec)
+deleted     100 ephemeral znodes  in     27 ms (0.273678 ms/op 3653.925028/sec)
+notif       100           watches in   1001 ms (10.010710 ms/op 99.893017/sec)
+Latency test complete
+

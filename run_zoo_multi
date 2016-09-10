@@ -1,0 +1,119 @@
+#!/bin/bash
+
+cmd=$1
+n=$2
+k=$3
+if [ "$cmd" == "start" ];then
+if [ -f "zoo.running" ];then
+	./run_zoo stop $(cat "zoo.running")
+	rm "zoo.running"
+fi
+
+
+conf_file="zoo.cfg"
+echo -e "tickTime=2000\n"\
+"initLimit=10\n"\
+"syncLimit=5\n" > $conf_file
+
+ip_list=("10.22.1.1" "10.22.1.2" "10.22.1.3" "10.22.1.4" "10.22.1.5" "10.22.1.6" "10.22.1.7" "10.22.1.8" "10.22.1.9")
+
+k_list=$(seq $n)
+l_list=$(seq $k)
+
+c=1
+port_a=2667
+port_b=3667
+client_port=2182
+data_dir="/home/jianyu/zookeeper-3.4.6/data-"
+
+rm "ip_list.txt"
+for j in $l_list
+do
+	for i in $k_list
+	do
+	echo "server."$c"=""${ip_list[i - 1]}"":$port_a:$port_b" >> "ip_list.txt"
+	c=$(( $c + 1 ))
+	done
+	port_a=$(( $port_a + 1 ))
+	port_b=$(( $port_b + 1 ))
+done
+
+for j in $l_list
+do
+        conf_this="zoo-"$j".cfg"
+        cat $conf_file > $conf_this
+        echo "dataDir="$data_dir$j"/" >> $conf_this
+        echo "clientPort="$client_port >> $conf_this
+	cat "ip_list.txt" >> $conf_this
+        client_port=$(( $client_port + 1 ))
+done
+
+base=1
+for j in $l_list
+do
+./scp_multi "zoo-"$j".cfg" zookeeper-3.4.6/conf $n
+./run_multi "mkdir ~/zookeeper-3.4.6/data-"$j $n
+./run_multi "echo \$((\$i + $base)) > ~/zookeeper-3.4.6/data-"$j"/myid" $n
+base=$(( $base + $n ))
+done
+
+for j in $l_list
+do
+./run_multi "~/zookeeper-3.4.6/bin/zkServer.sh start ~/zookeeper-3.4.6/conf/zoo-"$j".cfg" $n -b
+done
+
+sleep 3
+leader_ip=${ip_list[0]}
+leader_port=2182
+for j in $l_list
+do
+for i in $k_list
+do
+	status=$(ssh -t jianyu@"${ip_list[i]}" "~/zookeeper-3.4.6/bin/zkServer.sh status ~/zookeeper-3.4.6/conf/zoo-"$j".cfg"|grep leader|wc -l)
+	if [ "$status" == "1" ];then
+		leader_ip=${ip_list[i]}
+		leader_port=$(( $j + 2181 ))
+	fi
+done
+done
+
+echo "leader ip is "$leader_ip":"$leader_port
+echo $n > zoo.running
+echo $k > zoo.multi.running
+if [ ! -d "result" ];then
+mkdir result
+fi
+
+if [ ! -d "result/$n-$k" ];then
+mkdir "result/$n-$k"
+fi
+
+log_file="result/"$n-$k"/"$(date +%s)".txt"
+
+m=15
+m_list=$(seq $m)
+for t in $m_list
+do
+PYTHONPATH=~/zk-smoketest/lib.linux-x86_64-2.6 LD_LIBRARY_PATH=~/zk-smoketest/lib.linux-x86_64-2.6 ~/zk-smoketest/zk-latencies.py --servers=$leader_ip":$leader_port" --znode_size=64 --znode_count=100 >> $log_file
+echo "" >> $log_file
+done
+
+./run_zoo_multi stop $n
+exit
+fi
+
+if [ "$cmd" == "stop" ];then
+l=1
+l=$(cat "zoo.multi.running")
+l_list=$(seq $l)
+for j in $l_list
+do
+echo "here"
+./run_multi "~/zookeeper-3.4.6/bin/zkServer.sh stop ~/zookeeper-3.4.6/conf/zoo-"$j".cfg" $n -b
+done
+rm "zoo.multi.running"
+rm "zoo.running"
+fi
+
+
+

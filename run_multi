@@ -1,0 +1,85 @@
+#!/bin/bash
+
+ip_list=("10.22.1.1" "10.22.1.2" "10.22.1.3" "10.22.1.4" "10.22.1.5" "10.22.1.6" "10.22.1.7" "10.22.1.8" "10.22.1.9")
+user="jianyu"
+port=22
+
+n=0
+bool_bg="false"
+bool_file="false"
+bool_help="false"
+exec_cmd=$1
+server_count=$(( $2 - 1))
+if [ "$1" == "-h" ];then
+	echo -e "Usage: ./run_multi command n\n"\
+"-h help\n"\
+"-b run in background\n"\
+"-f write result to file"
+	exit
+fi
+
+if [ -z "$2" ];then
+	echo "2 parameters are required, type -h for help"
+	exit
+fi
+
+k_list=$(seq $server_count)
+
+if [ -z "$1" ];then
+	echo "cmd error"
+	exit
+fi
+
+if [ -z "$k_list" ];then
+	echo "please input a valid n"
+	exit
+fi
+
+until [ -z "$1" ]
+do
+    ((n += 1))
+    if [ "$1" == "-b" ];then
+        bool_bg="true"
+        echo "running in background"
+    fi
+    if [ "$1" == "-f" ];then
+        bool_file="true"
+        echo "write to file"
+    fi
+    shift
+done
+
+echo "exec cmd "$exec_cmd
+background=""
+if [ "$bool_bg" == "true" ];then
+background=" &"
+fi
+
+i=0
+if [ "$bool_file" == "true" ];then
+to_file=" > result-10.22.1.1.txt"
+fi
+cmd=$exec_cmd$to_file$background
+echo $cmd
+cmd=$(echo $cmd)
+echo $cmd
+ddr=$(pwd)
+cd ~
+eval "$cmd"
+cd $ddr
+to_file=""
+for i in $k_list
+do
+	if [ -z "${ip_list[i - 1]}" ];then
+		exit
+	fi
+        if [ "$bool_file" == "true" ];then
+        to_file=" > result-$ip.txt"
+        fi
+        cmd='ssh -t -p '$port" $user"@"${ip_list[i]}"' "bash -ic \"'$exec_cmd'\""'$to_file$background
+        if [ "$bool_bg" == "false" ];then
+                echo "executing cmd in ""${ip_list[i]}"
+        fi
+        echo "$cmd"
+	eval "$cmd"
+done

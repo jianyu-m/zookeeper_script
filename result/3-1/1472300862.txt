@@ -1,0 +1,12 @@
+Connecting to 10.22.1.3:2182
+Connected in 7 ms, handle is 0
+Testing latencies on server 10.22.1.3:2182 using syncronous calls
+created     200 permanent znodes  in    166 ms (0.830750 ms/op 1203.730894/sec)
+set         200           znodes  in    143 ms (0.719525 ms/op 1389.806505/sec)
+get         200           znodes  in     45 ms (0.228260 ms/op 4380.977449/sec)
+deleted     200 permanent znodes  in    134 ms (0.671585 ms/op 1489.015667/sec)
+created     200 ephemeral znodes  in    142 ms (0.710189 ms/op 1408.075199/sec)
+watched     200           znodes  in     37 ms (0.186779 ms/op 5353.906639/sec)
+deleted     200 ephemeral znodes  in    128 ms (0.641340 ms/op 1559.235309/sec)
+notif       200           watches in   1001 ms (5.005286 ms/op 199.788794/sec)
+Latency test complete
